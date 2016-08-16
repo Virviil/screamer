@@ -1,0 +1,2 @@
+defmodule Screamer do
+end
