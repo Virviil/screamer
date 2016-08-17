@@ -5,8 +5,12 @@ Microlibrary, which adds special function definition macro `def!`, working like 
 * The body of the function should be defined to raise errors in case of exceptional situations.
 
 ```elixir
-def! foo() do
-  raise "error"
+def MyModule
+  use Screamer
+
+  def! foo() do
+    raise "error"
+  end
 end
 ```
 

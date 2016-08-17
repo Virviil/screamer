@@ -5,6 +5,8 @@ defmodule Screamer.Mixfile do
     [app: :screamer,
      version: "0.1.0",
      elixir: "~> 1.3",
+     description: description(),
+     package: package(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps()]
@@ -27,6 +29,24 @@ defmodule Screamer.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:ex_doc, ">=0.0.0", only: :dev}
+    ]
+  end
+
+  defp description do
+    """
+    Screamer-function definitions autogenerator
+    """
+  end
+
+  defp package do
+    [
+      name: :screamer,
+      files: ["lib", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+      maintainers: ["Dmitry Rubinstein"],
+      licenses: ["MIT"],
+      links: %{"Github"=>"https://github.com/virviil/screamer"}
+    ]
   end
 end
