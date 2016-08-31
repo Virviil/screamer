@@ -32,21 +32,13 @@ iex> MyModule.foo!
 
 ## Installation
 
-The package is [available in Hex](https://hex.pm/docs/publish), and can be installed as:
+The package is [available in Hex](https://hex.pm/packages/screamer), and can be installed as:
 
   1. Add `screamer` to your list of dependencies in `mix.exs`:
 
     ```elixir
     def deps do
       [{:screamer, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `screamer` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:screamer]]
     end
     ```
 
